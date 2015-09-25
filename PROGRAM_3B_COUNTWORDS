@@ -1,0 +1,15 @@
+#************COUNT NUMBER OF WORD OCCURENCES*********************#
+
+def count_words(words):
+	words_split = words.split()
+	words_split.sort()
+	print(words_split)
+	for word in words_split:
+		x = words_split.count(word)
+		print("The word "+word+" is repeated "+str(x)+" number of times")
+		word_prev = word
+		if (word == word_prev):
+			words_split.remove(word)
+
+words = input("Enter a list of words\n")			
+count_words(words)
