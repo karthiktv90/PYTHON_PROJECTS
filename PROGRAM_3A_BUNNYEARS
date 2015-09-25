@@ -1,0 +1,12 @@
+#******************** BUNNY EARS ********************#
+
+def bunny_func(bunnies):
+	if (bunnies == 0):
+		return 0
+	if ((bunnies % 2) == 0):
+		return 3 + bunny_func(bunnies - 1) 
+	else:
+		return 2 + bunny_func(bunnies - 1) 
+		
+bunnies = int(input("Enter number of bunnies\n"))
+print("Total number of bunny ears is",bunny_func(bunnies))
